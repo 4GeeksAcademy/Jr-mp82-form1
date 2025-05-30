@@ -4,12 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 
 .card-title {
     border: 1px solid black;
     background-color: lightgray;
+}
+
+#botBar {
+    border: 1px solid black;
+    background-color: lightgray;
+    border-radius: 6px;
+}
+
+.btn btn-primary {
+ position-anchor: right;
+}
+
+#MoveBot {
+    padding-left: 1120px;
+}
+
+.container {
+    padding-top: 50px;
 }
 
 </style>
@@ -21,10 +39,10 @@
 
 
     <div class="container">
-    <div class="card" style="width: 50rem flex;">
+    <div class="card" style="width: auto;">
 <h1 class="card-title">Payment form example</h1>
   <div class="card-body">
-<form action="">
+<form>
 <div class="row">
     <div class="col-5">Card #</div>
     <div class="col-3">CVC #</div>
@@ -32,9 +50,9 @@
 </div>
 
 <div class="row">
-    <div class="col-5"><input type="number" id="card" placeholder="XXXXXXXXXXXX" ></div>
-    <div class="col-3"><input type="number" maxlength="4" placeholder="0000"></div>
-    <div class="col-4">$ <input type="number"></div>
+    <div class="col-5"><input type="number" id="card" placeholder="XXXXXXXXXXXX" style="width: 100%;" ></div>
+    <div class="col-3"><input type="number" maxlength="4" placeholder="0000" style="width: 100%;"></div>
+    <div class="col-4"><input type="number" placeholder="$ Amount" style="width: 100%;"></div>
 </div>
 
 <br>
@@ -44,8 +62,8 @@
 </div>
 
 <div class="row">
-    <div class="col-6"> <input type="text"></div>
-    <div class="col-6"> <input type="text"></div>
+    <div class="col-6"> <input type="text" style="width: 100%;"></div>
+    <div class="col-6"> <input type="text" style="width: 100%;"></div>
 </div>
 
 <br>
@@ -56,10 +74,10 @@
 </div>
 
 <div class="row">
-    <div class="col-6"> <input type="text"></div>
+    <div class="col-6"> <input type="text" style="width: 100%;"></div>
    
    
-    <div class="col-3"> <select name="State" id="State">
+    <div class="col-3"> <select name="State" id="State" style="width: 100%;">
     <option value="pick" >Pick your State</option>
     <option value="Michigan" >Michigan</option>
     <option value="Texas" >Texas</option>
@@ -67,7 +85,7 @@
 
     </select></div>
     
-    <div class="col-3"> <input type="number" maxlength="5"></div>
+    <div class="col-3"> <input type="number" maxlength="5" style="width: 100%;"></div>
 </div>
 
 <br>
@@ -80,22 +98,28 @@
 
 <div class="row">
     <div class="col-6"><input type="radio" name="payment" id="visa">
-    <label for="visa">Visa</label>
-        <div class="col-6"><input type="radio" name="payment" id="Mastercard">
-    <label for="visa">Mastercard</label>
-        <div class="col-6"><input type="radio" name="payment" id="visa">
-    <label for="visa">Visa</label>
-        <div class="col-6"><input type="radio" name="payment" id="visa">
-    <label for="visa">Visa</label>
+    <label for="visa"><i class="fa fa-cc-visa"></i></label>
+       <input type="radio" name="payment" id="Mastercard">
+    <label for="Mastercard"><i class="fa fa-cc-mastercard"></i></label>
+        <input type="radio" name="payment" id="Paypall">
+    <label for="Paypall"><i class="fa fa-cc-paypal"></i></label>
+        <input type="radio" name="payment" id="crypto">
+    <label for="crypto"><i class="fa fa-bitcoin"></i></label>
     </div>
-    <div class="col-6"><textarea name="message" id="message" cols="40" rows="5"></textarea></div>
+    <div class="col-6"><textarea name="message" id="message" cols="60" rows="5"></textarea></div>
+
+    <div class="row">
+        <div class="col-6"></div>
+        <div class="col-6">add any notes here</div>
+    </div>
 
 </div>
-
-    <a href="#" class="btn btn-primary">Go somewhere</a>
 </form>  
 </div>
 </div>
+<div class="row" id="botBar">
+  <div class="col-12" id="MoveBot">  <a href="#" class="btn btn-secondary">Cancel</a>    <a href="#" class="btn btn-primary">Send</a></div>
+  </div>
 </div>
 
 
